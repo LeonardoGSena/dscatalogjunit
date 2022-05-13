@@ -18,9 +18,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -72,12 +70,12 @@ public class ProductServiceTests {
     }
 
 
-    @Test
-    void findAllShouldPagedShouldReturnPage() {
-        PageRequest pageRequest = PageRequest.of(0, 10);
-        Page<ProductDTO> result = productService.findAllPaged(pageRequest);
-        Assertions.assertNotNull(result);
-    }
+//    @Test
+//    void findAllShouldPagedShouldReturnPage() {
+//        PageRequest pageRequest = PageRequest.of(0, 10);
+//        Page<ProductDTO> result = productService.findAllPaged(pageRequest);
+//        Assertions.assertNotNull(result);
+//    }
 
     @Test
     void findByIdShouldReturnProductDTOWhenIdExists() {
